@@ -23,6 +23,10 @@ func Provider() terraform.ResourceProvider {
 				Description: "The API Token for operations.",
 			},
 		},
+
+		DataSourcesMap: map[string]*schema.Resource{
+			"semaphoreci_projects": dataSourceSemaphoreCIProjects(),
+		},
 	}
 }
 
